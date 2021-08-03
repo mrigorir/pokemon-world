@@ -22,7 +22,7 @@ function createPokemonCard(pokemon) {
   const pokeCard = document.createElement('div');
   pokeCard.classList.add('pokemonCard');
 
-  const pokeCardInnerHTML = ` `;
+  const pokeCardInnerHTML = `{pokemon.id} `;
 
   pokeCard.innerHTML = pokeCardInnerHTML;
 
