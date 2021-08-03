@@ -28,6 +28,10 @@ body {
 .pokemonCard {
   background-color: #eee;
   border-radius: 20px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
   margin: 10px;
 }
 
@@ -39,7 +43,23 @@ body {
 .pokemonCard .image-container img {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
-  margin-top: 20px;
   width: 200px;
   max-width: 90%;
+}
+
+.pokemonCard .info {
+  margin-top: 20px;
+}
+
+.pokemonCard .number {
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 0.8em;
+  padding: 5px 10px;
+
+}
+
+.pokemonCard .name {
+  margin: 15px 0 7px;
+  letter-spacing: 1px;
 }
