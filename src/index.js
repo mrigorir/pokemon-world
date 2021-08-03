@@ -25,8 +25,15 @@ function createPokemonCard(pokemon) {
   pokeCard.classList.add('pokemonCard');
 
   const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+  const image = pokemon.sprites.front_default; 
 
-  const pokeCardInnerHTML = ` ${name} `;
+  const pokeCardInnerHTML = ` 
+  <div class="image-container">
+  <img src="${image}">
+  
+  
+  </div>
+  ${name} `;
 
   pokeCard.innerHTML = pokeCardInnerHTML;
 
