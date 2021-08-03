@@ -30,8 +30,6 @@ function createPokemonCard(pokemon) {
   const pokeCardInnerHTML = ` 
   <div class="image-container">
   <img src="${image}">
-  
-  
   </div>
   ${name} `;
 
