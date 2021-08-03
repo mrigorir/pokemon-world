@@ -15,3 +15,31 @@ body {
   font-family: 'Lato';
   margin: 0;
 }
+
+.pokeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.pokemonCard {
+  background-color: #eee;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.pokemonCard .img-container {
+  margin-top: 20px;
+  height: 120px;
+  width: 120px;
+}
+.pokemonCard .image-container img {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  margin-top: 20px;
+  width: 200px;
+  max-width: 90%;
+}

@@ -24,8 +24,6 @@ function createPokemonCard(pokemon) {
   const pokeCard = document.createElement('div');
   pokeCard.classList.add('pokemonCard');
   const info = document.createElement('div');
-  const like = document.createElement('i');
-  // i.classList.add('fas', 'fa-heart');
 
   const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
   const image = pokemon.sprites.front_default;
@@ -37,7 +35,7 @@ function createPokemonCard(pokemon) {
   <div class="pokeTitle">
   <p class="pokeName">${name}</p>
   <div class="likeContainer>
-  <img class="likes" src="">
+  <img class="likes" src="${image}">
   <p class="numberOfLikes">${5} Likes </p>
   </div>  
   </div>   
