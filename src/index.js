@@ -2,7 +2,7 @@ import './styles/font.css';
 import './styles/style.css';
 
 const pokeContainer = document.getElementById('pokeContainer');
-const pokemonNumber = 20;
+const pokemonNumber = 90;
 
 const getPokemon = async (id) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
@@ -13,16 +13,20 @@ const getPokemon = async (id) => {
 }
 
 const fetchPokemons = async () => {
-  for (let i=0; i<=pokemonNumber; i++){
+  for (let i=1; i<=pokemonNumber; i++){
     await getPokemon(i)
   }
 }
+
+fetchPokemons();
 
 function createPokemonCard(pokemon) {
   const pokeCard = document.createElement('div');
   pokeCard.classList.add('pokemonCard');
 
-  const pokeCardInnerHTML = `{pokemon.id} `;
+  const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+
+  const pokeCardInnerHTML = ` ${name} `;
 
   pokeCard.innerHTML = pokeCardInnerHTML;
 
