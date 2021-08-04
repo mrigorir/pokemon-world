@@ -51,3 +51,10 @@ const upDateComment = async (id, username, comment) =>  {
   })
   console.log(await response.text());
 }
+
+const getComments = async (id) => {
+  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments?item_id=${id}`;
+  const response = fetch(url);
+  const result = response.json();
+  return result;
+}
