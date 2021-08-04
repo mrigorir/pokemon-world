@@ -54,7 +54,16 @@ const upDateComment = async (id, username, comment) =>  {
 
 const getComments = async (id) => {
   const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments?item_id=${id}`;
-  const response = fetch(url);
-  const result = response.json();
-  return result;
+  const response = await fetch(url);
+  const result = await response.json();
+  console.log(result);
+  console.log(result[0].creation_date);
+  console.log(result[0].username);
+  console.log(result[0].comment);
+  console.log(result[1].creation_date);
+  console.log(result[1].username);
+  console.log(result[1].comment);
+  console.log(result[2].creation_date);
+  console.log(result[2].username);
+  console.log(result[2].comment);
 }
