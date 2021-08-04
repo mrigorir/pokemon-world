@@ -25,6 +25,12 @@ body {
   max-width: 1200px;
 }
 
+
+/* .pokeContainer {
+  display: grid;
+  align-items: space-evenly;
+  grid-template-colums: repeat(auto-fit, minmax(240px, 3fr));
+} */
 .pokemonCard {
   background-color: #eee;
   border-radius: 20px;
@@ -43,7 +49,7 @@ body {
 .pokemonCard .image-container img {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
-  width: 200px;
+  width: 300px;
   max-width: 90%;
 }
 
@@ -62,4 +68,9 @@ body {
 .pokemonCard .name {
   margin: 15px 0 7px;
   letter-spacing: 1px;
+}
+
+.pokeTitle {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
