@@ -27,6 +27,10 @@ function createPokemonCard(pokemon) {
 
   const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
   const image = pokemon.sprites.front_default;
+  const type = pokemon.types[0].type.name;
+  const weight = pokemon.weight;
+  const moves = pokemon.moves[0].move.name;
+  const ability = pokemon.abilities[0].ability.name;
 
   const pokeCardInnerHTML = ` 
   <div class="image-container">
@@ -34,6 +38,11 @@ function createPokemonCard(pokemon) {
   </div>
   <div class="pokeTitle">
   <p class="pokeName">${name}</p>
+  <p class="pokeName">type: ${type}</p>
+  <p class="pokeName"> weight: ${weight}</p>
+  <p class="pokeName">moves: ${moves}</p>
+  <p class="pokeName">ability: ${ability}</p>
+
   <div class="likeContainer>
   <img class="likes" src="${image}">
   <p class="numberOfLikes">${5} Likes </p>
