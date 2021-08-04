@@ -35,3 +35,19 @@ const getLikes = async (id) => {
   // return likes;
   // console.log(await response.json());
 }
+
+const upDateComment = async (id, username, comment) =>  {
+  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments/`
+  const response = await fetch(url, {
+    method: 'POST',
+    body: JSON.stringify({
+      "item_id": id,
+      "username": username,
+      "comment": comment
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  })
+  console.log(await response.text());
+}
