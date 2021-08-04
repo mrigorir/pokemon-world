@@ -125,6 +125,16 @@ footer {
   font-size: 20px;
 }
 
+.pokemon-board {
+  border: dotted 2px;
+  border-image: linear-gradient(to bottom, tomato 0%, gold 100%) 1;
+  box-shadow: 5px 5px #173fa5;
+}
+
+.bg-pokemon {
+  background: linear-gradient(to bottom, #f0f1f1 0%, #d2d8e7 100%);
+}
+
 /* footer */
 
 .bg-footer {

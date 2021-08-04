@@ -52,76 +52,8 @@
     </nav>
     <!-- Sections Container -->
     <main id="section-container">
-      
-      
-      
-      <!-- Pokemon section -->
-    <section id="pokemon-section">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="abraContainer d-flex align-items-center justify-content-center mt-5"></div>
-        </div>
-      </div>
-      <div class="row">
-        <header>
-          <h1 class="text-center pokemon-title mt-3"> Abra </h1>
-        </header>
-        <div class="col-md-4 col-sm-12 mx-auto">
-          <div class="info-container d-flex align-items-center justify-content-between mt-5">
-            <p class="fw-bold h4 ms-5"> Evolution:  <span class="text-secondary"> Kadabra.        </span> </p>
-            <p class="fw-bold h4 me-5"> Attack:     <span class="text-secondary"> Psyquic </span> </p>
-          </div>
-          <div class="info-container d-flex align-items-center justify-content-between mt-3">
-            <p class="fw-bold h4 ms-5"> Weight: <span class="text-secondary"> 30 kg. </span> </p>
-            <p class="fw-bold h4 me-5"> Power:  <span class="text-secondary"> 900    </span> </p>
-          </div>
-        </div>
-      </div>
-      <div class="row mx-3">
-        <div class="col-md-4 col-sm-12 mx-auto">
-          <h1 class="text-center mt-5"> 
-            Comments 
-            <span class="fw-bold" id="comment-counter">
-              (2)
-            </span>
-          </h1>
-         <div class="d-flex align-items-start flex-column my-5 border border-dark p-3 comment-board">
-          <p class="comment">
-            <span class="fw-bold" class="comment-name"> Marco: </span> 
-            I want that Abra! 
-          </p>
-          <p class="comment">
-            <span class="fw-bold" class="comment-name"> Julius: </span> 
-            It's really nice. 
-          </p>
-         </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center my-3"> 
-            Add a Comment
-          </h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 mx-auto mb-5">
-          <form action="" id="form" class="mx-auto w-50">
-            <div class="form-group mt-3">
-              <input type="text" class="form-control-sm" placeholder="Your name" id="input-name">
-            </div>
-            <div class="form-group mt-3">
-              <textarea class="form-group p-2" cols="30" rows="5" placeholder="Your insights" id="input-insight"></textarea>
-            </div>
-            <button type="submit" class="btn form-button mt-3">Comment</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-
      <!-- Collection section -->
-     <section class="mx-auto w-75 d-none" id="pokemon-section">
+     <section class="mx-auto w-75" id="pokemon-section">
       <div class="row">
         <div class="col-md-12 my-5">
           <header>
@@ -145,7 +77,7 @@
               </h5>
             </div>
             <div class="card-footer w-100 d-flex align-items-center justify-content-center p-3">
-              <button href="#" class="btn button make-comment"> Comments </button>
+              <button href="#" class="btn button make-comment" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Comments </button>
             </div>
           </div>
         </div>
@@ -162,7 +94,7 @@
               </h5>
             </div>
             <div class="card-footer w-100 d-flex align-items-center justify-content-center p-3">
-              <button class="btn button make-comment"> Comments </button>
+              <button class="btn button make-comment" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Comments </button>
             </div>
           </div>
         </div>
@@ -179,7 +111,7 @@
               </h5>
             </div>
             <div class="card-footer w-100 d-flex align-items-center justify-content-center p-3">
-              <button href="#" class="btn button make-comment"> Comments </button>
+              <button href="#" class="btn button make-comment" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Comments </button>
             </div>
           </div>
         </div>
@@ -196,18 +128,99 @@
               </h5>
             </div>
             <div class="card-footer w-100 d-flex align-items-center justify-content-center p-3">
-              <button href="#" class="btn button make-comment"> Comments </button>
+              <button href="#" class="btn button make-comment" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Comments </button>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-
-
     </main>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-pokemon">
+          <div class="modal-header">
+            <h3 class="modal-title fw-bold" id="staticBackdropLabel"> Abra Profile </h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <section id="pokemon-section" class="container-fluid p-0 m-0">
+              <div class="row pokemon-board w-75 mx-auto">
+                <div class="col-12">
+                  <div class="abraContainer d-flex align-items-center justify-content-center mt-5"></div>
+                </div>
+                <header>
+                  <h1 class="text-center pokemon-title mt-3"> Abra </h1>
+                </header>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="info-container d-flex align-items-center justify-content-around mt-5">
+                    <p class="fw-bold h4"> Evolution:  <span class="text-secondary"> Kadabra. </span> </p>
+                    <p class="fw-bold h4"> Attack:     <span class="text-secondary"> Psyquic.  </span> </p>
+                  </div>
+                  <div class="info-container d-flex align-items-center justify-content-around mt-3">
+                    <p class="fw-bold h4"> Weight: <span class="text-secondary"> 30 kg. </span> </p>
+                    <p class="fw-bold h4"> Power:  <span class="text-secondary"> 900    </span> </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row mx-3">
+                <div class="col-12">
+                  <h1 class="text-center mt-5"> 
+                    Comments 
+                    <span class="fw-bold" id="comment-counter">
+                      (2)
+                    </span>
+                  </h1>
+                 <div class="d-flex align-items-start flex-column my-5 border border-dark p-3 comment-board">
+                  <p class="comment">
+                    <span class="fw-bold" class="comment-name"> Marco: </span> 
+                    I want that Abra! 
+                  </p>
+                  <p class="comment">
+                    <span class="fw-bold" class="comment-name"> Julius: </span> 
+                    It's really nice. 
+                  </p>
+                 </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <h1 class="text-center my-3"> 
+                    Add a Comment
+                  </h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 mx-auto mb-5">
+                  <form action="" id="form" class="mx-auto w-75">
+                    <div class="form-group mt-4">
+                      <input type="text" class="form-control-sm" placeholder="Your name" id="input-name">
+                    </div>
+                    <div class="form-group mt-3">
+                      <textarea class="form-group p-2" cols="50" rows="5" placeholder="Your insights" id="input-insight"></textarea>
+                    </div>
+                    <button type="submit" class="btn form-button mt-3">Comment</button>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-footer border-top border-dark border-2">
+    <footer class="text-center text-lg-start bg-footer border-top border-dark border-2 fixed-bottom">
       <!-- Copyright -->
       <div class="text-center p-4">
         © 2021 Copyright:
