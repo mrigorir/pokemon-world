@@ -1,0 +1,132 @@
+/* general */
+
+body {
+  background-color: #f0f1f1;
+}
+
+/* fonts */
+
+html {
+  font-family: sans-serif; 
+}
+
+/* nav */
+
+.bordered {
+  border-bottom: solid 5px #000;
+}
+
+.link,
+.main-title {
+  color: #ffd900;
+  text-shadow: -2px -2px 1px #173fa5, 2px 2px 1px #173fa5, -2px 2px 1px #173fa5, 2px 2px 1px #173fa5;
+}
+
+.main-title {
+  text-shadow: -2px -5px 1px #173fa5, 2px 2px 1px #173fa5, -2px 2px 1px #173fa5, 2px 2px 1px #173fa5;
+}
+
+a.link:hover,
+.button:hover {
+  color: #ffd900;
+}
+
+.link:after {
+  display:block;
+  content: '';
+  transform: scaleX(0);  
+  transform-origin:  0% 50%;
+}
+
+.link:hover:after {
+  border-bottom: solid 5px #173fa5;
+  transform: scaleX(1);
+  transition: transform 300ms ease-in-out;
+}
+
+/* collection section */
+
+.main-title {
+  font-size: 80px;
+}
+
+.main-title,
+.pokemon-title {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.card {
+  width: 250px;
+}
+
+.button,
+footer {
+  color: #ffff00;
+}
+
+/* pokemon section */
+
+.pokemon-title {
+  font-size: 60px;
+}
+
+.comment-board {
+  box-shadow: 5px 5px #000;
+}
+
+/* Comments */
+#input-name,
+#input-insight,
+.comment-board {
+  background-color: white;
+}
+
+#input-name,
+#input-insight,
+.form-button {
+  outline: none;
+  border-radius: 0;
+  background-color: white;
+  box-shadow: 5px 5px #000;
+}
+
+#input-name::placeholder,
+#input-insight::placeholder {
+  font-weight: bolder;
+}
+
+#input-name,
+#input-insight,
+#input-name::placeholder,
+#input-insight::placeholder,
+.form-button {
+  color: #000;
+}
+
+.form-button {
+  text-transform: capitalize;
+  padding: 2px 8px;
+  font-weight: 500;
+  font-size: 20px;
+  border: solid 2px #000;
+}
+
+.button,
+.form-button:hover {
+  text-transform: capitalize;
+  border-radius: 0;
+  color: #ffff00;
+  background-color: tomato;
+  text-align: center;
+  padding: 2px 8px;
+  box-shadow: 5px 5px #173fa5;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* footer */
+
+.bg-footer {
+  background-color: #ff6347;
+}

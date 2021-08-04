@@ -1,11 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon World</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous">
+  </script>
+  <script src="https://kit.fontawesome.com/9f43e9dbcb.js" crossorigin="anonymous"></script>
+  <title>Pokemon World</title>
 </head>
 <body>
-  <h1 class="qwe">Some title</h1>
+  <div class="container-fluid p-0 m-0">
+    <!-- Navbar -->
+    <nav id="nav" class="bordered">
+      <ul class="navbar d-flex align-items-center justify-content-around list-unstyled m-0 p-0" style="background-color: tomato;">
+        <div class="d-flex align-items-center justify-content-center">
+          <li class="navItem p-2">
+            <a href="#" class="navLink text-dark text-decoration-none fw-bold" id="navIcon">
+            </a>
+          </li>
+        </div>
+        <div class="gengarContainer ms-5"></div>
+        <div class="d-flex align-items-center justify-content-around">
+          <li class="navItem border-dark-right py-2 px-3">
+            <a href="#" class="navLink text-decoration-none fw-bold h5 link" id="listLink">
+              Types
+            </a>
+          </li>
+          <li class="navItem border-dark-right py-2 px-3">
+            <a href="#" class="navLink text-decoration-none fw-bold h5 link" id="addLink">
+              Evolutions
+            </a>
+          </li>
+          <li class="navItem border-dark-right py-2 px-3">
+            <a href="#" class="navLink text-decoration-none fw-bold h5 link" id="addLink">
+              Pokeballs
+            </a>
+          </li>
+          <li class="navItem border-dark-right py-2 px-3">
+            <a href="#" class="navLink text-decoration-none fw-bold h5 link" id="addLink">
+              Our Collection
+            </a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <!-- Sections Container -->
+    <main id="section-container">
+      
+      
+      
+      <!-- Pokemon section -->
+    <section id="pokemon-section">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="abraContainer d-flex align-items-center justify-content-center mt-5"></div>
+        </div>
+      </div>
+      <div class="row">
+        <header>
+          <h1 class="text-center pokemon-title mt-3"> Abra </h1>
+        </header>
+        <div class="col-md-4 col-sm-12 mx-auto">
+          <div class="info-container d-flex align-items-center justify-content-between mt-5">
+            <p class="fw-bold h4 ms-5"> Evolution:  <span class="text-secondary"> Kadabra.        </span> </p>
+            <p class="fw-bold h4 me-5"> Attack:     <span class="text-secondary"> Psyquic </span> </p>
+          </div>
+          <div class="info-container d-flex align-items-center justify-content-between mt-3">
+            <p class="fw-bold h4 ms-5"> Weight: <span class="text-secondary"> 30 kg. </span> </p>
+            <p class="fw-bold h4 me-5"> Power:  <span class="text-secondary"> 900    </span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-3">
+        <div class="col-md-4 col-sm-12 mx-auto">
+          <h1 class="text-center mt-5"> 
+            Comments 
+            <span class="fw-bold" id="comment-counter">
+              (2)
+            </span>
+          </h1>
+         <div class="d-flex align-items-start flex-column my-5 border border-dark p-3 comment-board">
+          <p class="comment">
+            <span class="fw-bold" class="comment-name"> Marco: </span> 
+            I want that Abra! 
+          </p>
+          <p class="comment">
+            <span class="fw-bold" class="comment-name"> Julius: </span> 
+            It's really nice. 
+          </p>
+         </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center my-3"> 
+            Add a Comment
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mx-auto mb-5">
+          <form action="" id="form" class="mx-auto w-50">
+            <div class="form-group mt-3">
+              <input type="text" class="form-control-sm" placeholder="Your name" id="input-name">
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-group p-2" cols="30" rows="5" placeholder="Your insights" id="input-insight"></textarea>
+            </div>
+            <button type="submit" class="btn form-button mt-3">Comment</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+     <!-- Collection section -->
+     <section class="mx-auto w-75 d-none" id="pokemon-section">
+      <div class="row">
+        <div class="col-md-12 my-5">
+          <header>
+            <h1 class="text-center main-title">
+              Pokemons
+            </h1>
+          </header>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 mb-5">
+          <div class="card">
+            <div class="card-img-top abraContainer d-flex align-items-center justify-content-center pt-3"></div>
+            <div class="card-body">
+              <h5 class="card-title d-flex align-items-center justify-content-around">
+                <span class="name pe-3 fw-bold"> Abra </span>
+                <a href="#" class="likes text-dark text-decoration-none"> 
+                  <i class="fas fa-heart text-danger"> </i> 
+                  <span class="counter"> 60 </span>
+                </a>
+              </h5>
+            </div>
+            <div class="card-footer w-100 d-flex align-items-center justify-content-center p-3">
+              <button href="#" class="btn button make-comment"> Comments </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-5">
+          <div class="card">
+            <div class="card-img-top abraContainer d-flex align-items-center justify-content-center pt-3"></div>
+            <div class="card-body">
+              <h5 class="card-title d-flex align-items-center justify-content-around">
+                <span class="name pe-3 fw-bold"> Abra </span>
+                <a href="#" class="likes text-dark text-decoration-none"> 
+                  <i class="fas fa-heart text-danger"> </i> 
+                  <span class="counter"> 60 </span>
+                </a>
+              </h5>
+            </div>
+            <div class="card-footer w-100 d-flex align-items-center justify-content-center p-3">
+              <button class="btn button make-comment"> Comments </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-5">
+          <div class="card">
+            <div class="card-img-top abraContainer d-flex align-items-center justify-content-center pt-3"></div>
+            <div class="card-body">
+              <h5 class="card-title d-flex align-items-center justify-content-around">
+                <span class="name pe-3 fw-bold"> Abra </span>
+                <a href="#" class="likes text-dark text-decoration-none"> 
+                  <i class="fas fa-heart text-danger"> </i> 
+                  <span class="counter"> 60 </span>
+                </a>
+              </h5>
+            </div>
+            <div class="card-footer w-100 d-flex align-items-center justify-content-center p-3">
+              <button href="#" class="btn button make-comment"> Comments </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-5">
+          <div class="card">
+            <div class="card-img-top abraContainer d-flex align-items-center justify-content-center pt-3"></div>
+            <div class="card-body">
+              <h5 class="card-title d-flex align-items-center justify-content-around">
+                <span class="name pe-3 fw-bold"> Abra </span>
+                <a href="#" class="likes text-dark text-decoration-none"> 
+                  <i class="fas fa-heart text-danger"> </i> 
+                  <span class="counter"> 60 </span>
+                </a>
+              </h5>
+            </div>
+            <div class="card-footer w-100 d-flex align-items-center justify-content-center p-3">
+              <button href="#" class="btn button make-comment"> Comments </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    </main>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-footer border-top border-dark border-2">
+      <!-- Copyright -->
+      <div class="text-center p-4">
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Microverse</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
