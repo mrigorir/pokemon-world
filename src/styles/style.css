@@ -8,6 +8,9 @@ body {
   margin-bottom: 150px;
 }
 
+.dimensions {
+  height: 100px;
+}
 
 /* fonts */
 
@@ -22,15 +25,17 @@ html {
 }
 
 .link,
-.main-title {
+.poke-info {
   color: #ffd900;
-  text-shadow: -2px -2px 1px #173fa5, 2px 2px 1px #173fa5, -2px 2px 1px #173fa5, 2px 2px 1px #173fa5;
+  text-shadow:  2px -2px 4px #173fa5, 2px -2px 4px #173fa5,  2px -2px 4px #173fa5, 2px -2px 4px #173fa5;
 }
 
 .main-title {
   text-shadow: -2px -5px 1px #173fa5, 2px 2px 1px #173fa5, -2px 2px 1px #173fa5, 2px 2px 1px #173fa5;
 }
 
+.main-title,
+.poke-info,
 a.link:hover,
 .button:hover {
   color: #ffd900;

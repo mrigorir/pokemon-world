@@ -3,6 +3,8 @@ import { getLikes } from './likes';
 
 //variables
 const pokeList = document.getElementById('pokeList');
+const pokeTitle = document.getElementById('pokeTitle');
+let counter = 0;
 
 //functions
 const getPokemon = async (url) => {
@@ -15,9 +17,6 @@ const displayPokemon = pokemon => {
   const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
   const image = pokemon.sprites.front_default;
   const id = pokemon.id;
-  /*const like = getLikes(id).then((results) => {
-    return results;
-  });*/
   const div = document.createElement('div');
   div.classList.add('card', 'col-md-3', 'mt-5', 'mx-5', 'card-border', 'p-0', 'bg-pokemon');
   div.innerHTML = 
@@ -34,12 +33,24 @@ const displayPokemon = pokemon => {
           </h5>
         </div>
       <div class="card-footer d-flex align-items-center justify-content-center p-3 bg-card-footer">
-        <button href="#" class="btn button make-comment" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> 
-          Comments 
+        <button class="btn button info" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-id="${id}"> 
+          Info
         </button>
       </div>
-    </div>`
+    </div>`;
+
+    pokeTitle.innerHTML = `
+      <h1 class="text-center main-title">Pokemons (${counter++})</h1>`;
+  
     pokeList.appendChild(div);
+     getLikes().then(result => {
+      result.forEach(like => {
+        if (like.item_id == id) {
+          let span = document.querySelector(`span[data-id="${id}"]`);
+          span.textContent = like.likes;
+        }
+      })
+    });
 }
 
-export {getPokemon, pokeList};
+export {getPokemon, pokeList, counter};

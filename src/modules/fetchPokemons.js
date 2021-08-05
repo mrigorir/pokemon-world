@@ -1,6 +1,5 @@
 //imports
 import { getPokemon } from "./getPokemon";
-import { getLikes } from "./likes";
 
 //functions
 const fetchPokemons = async () => {
