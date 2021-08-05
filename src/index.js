@@ -42,17 +42,21 @@ function createPokemonCard(pokemon) {
   <p class="pokeName"> weight: ${weight}</p>
   <p class="pokeName">moves: ${moves}</p>
   <p class="pokeName">ability: ${ability}</p>
+  <p class="pokeName">ID: ${pokemon.id}</p>
 
   <div class="likeContainer>
-  <img class="likes" src="${image}">
+  <img class="${pokemon.id}" src="${image}">
+  <button like-id="${pokemon.id}" class="btn-likes"><i class="fas fa-heart"></i></button>
   <p class="numberOfLikes">${5} Likes </p>
   </div>  
   </div>   
-  <button class="commentBtn"> Comments </button>   
+  <button class="${pokemon.name}"> Comments </button>   
   `;
 
   pokeCard.innerHTML = pokeCardInnerHTML;
 
   pokeContainer.appendChild(pokeCard);
+
 }
 // getPokemon(1);
+

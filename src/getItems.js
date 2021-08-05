@@ -67,3 +67,7 @@ const getComments = async (id) => {
   console.log(result[2].username);
   console.log(result[2].comment);
 }
+
+// Number of comment == results.length;
+
+export {getPokemon, upDateLikes, upDateComment, getComments};
