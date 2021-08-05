@@ -1,9 +1,9 @@
 //imports
 import { getLikes } from './likes';
+import numberItems from './numberItems';
 
 //variables
 const pokeList = document.getElementById('pokeList');
-const pokeTitle = document.getElementById('pokeTitle');
 let counter = 0;
 
 //functions
@@ -38,10 +38,9 @@ const displayPokemon = pokemon => {
         </button>
       </div>
     </div>`;
+    
+    numberItems(counter++);
 
-    pokeTitle.innerHTML = `
-      <h1 class="text-center main-title">Pokemons (${counter++})</h1>`;
-  
     pokeList.appendChild(div);
      getLikes().then(result => {
       result.forEach(like => {
