@@ -1,6 +1,6 @@
 // imports
 import { getLikes } from './likes.js';
-import addCounterCommmentDOM from './numberItems.js';
+import { addCounterItemstDOM } from './numberItems.js';
 
 // variables
 const pokeList = document.getElementById('pokeList');
@@ -39,7 +39,7 @@ const displayPokemon = (pokemon) => {
       }
     });
   });
-  addCounterCommmentDOM();
+  addCounterItemstDOM();
 };
 
 const getPokemon = async (url) => {

@@ -1,6 +1,6 @@
 // imports
 import appId from './apiInfo.js';
-import addCounterCommmentDOM from './commentCounter.js';
+import { addCounterCommmentDOM } from './commentCounter.js';
 
 const modalCommentsProfile = document.getElementById('modalCommentsProfile');
 

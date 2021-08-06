@@ -4,8 +4,8 @@ const numberItems = () => {
   return items.length;
 };
 
-const addCounterItemstDOM = () => {
+export const addCounterItemstDOM = () => {
   document.querySelector('.counter').textContent = `(${numberItems()})`;
 };
 
-export default addCounterItemstDOM;
+export default numberItems;
