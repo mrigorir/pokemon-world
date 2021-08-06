@@ -1,26 +1,18 @@
-//imports
-import { getLikes } from './likes';
-import numberItems from './numberItems';
+// imports
+import { getLikes } from './likes.js';
+import addCounterCommmentDOM from './numberItems.js';
 
-//variables
+// variables
 const pokeList = document.getElementById('pokeList');
-let counter = 0;
 
-//functions
-const getPokemon = async (url) => {
-  const response = await fetch(url);
-  const pokemon = await response.json();
-  displayPokemon(pokemon);
-}
-
-const displayPokemon = pokemon => {
+// functions
+const displayPokemon = (pokemon) => {
   const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
   const image = pokemon.sprites.front_default;
-  const id = pokemon.id;
+  const { id } = pokemon;
   const div = document.createElement('div');
   div.classList.add('card', 'col-md-3', 'mt-5', 'mx-5', 'card-border', 'p-0', 'bg-pokemon');
-  div.innerHTML = 
-    `<div class="card-img-top abraContainer d-flex align-items-center justify-content-center pt-3">
+  div.innerHTML = `<div class="card-img-top abraContainer d-flex align-items-center justify-content-center pt-3">
         <img src="${image}" width="200" height="200" alt="I'm a pokemon!"/>
       </div>
         <div class="card-body">
@@ -38,18 +30,22 @@ const displayPokemon = pokemon => {
         </button>
       </div>
     </div>`;
-    
-    numberItems(counter++);
-
-    pokeList.appendChild(div);
-     getLikes().then(result => {
-      result.forEach(like => {
-        if (like.item_id == id) {
-          let span = document.querySelector(`span[data-id="${id}"]`);
-          span.textContent = like.likes;
-        }
-      })
+  pokeList.appendChild(div);
+  getLikes().then((result) => {
+    result.forEach((like) => {
+      if (parseInt(like.item_id, 10) === parseInt(id, 10)) {
+        const span = document.querySelector(`span[data-id="${id}"]`);
+        span.textContent = like.likes;
+      }
     });
-}
+  });
+  addCounterCommmentDOM();
+};
 
-export {getPokemon, pokeList, counter};
+const getPokemon = async (url) => {
+  const response = await fetch(url);
+  const pokemon = await response.json();
+  displayPokemon(pokemon);
+};
+
+export default getPokemon;

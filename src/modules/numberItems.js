@@ -1,10 +1,11 @@
-//variables
-const pokeTitle = document.getElementById('pokeTitle');
+// functions
+const numberItems = () => {
+  const items = [...document.getElementById('pokeList').children];
+  return items.length;
+};
 
-//functions
-const numberItems = (counter) => {
-  pokeTitle.innerHTML = `
-    <h1 class="text-center main-title">Pokemons (${counter})</h1>`;
-}
+const addCounterItemstDOM = () => {
+  document.querySelector('.counter').textContent = `(${numberItems()})`;
+};
 
-export default numberItems;
+export default addCounterItemstDOM;
