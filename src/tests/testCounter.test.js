@@ -7,6 +7,7 @@ import template from './templateHTML.js';
 import numberItems from '../modules/numberItems.js';
 import commentItems from '../modules/commentCounter.js';
 import commentsTemplate from './commentsTemplate.js';
+
 describe('Test amount of items (cards) inside the main container', () => {
   document.body.innerHTML = template;
   const itemsLength = numberItems();

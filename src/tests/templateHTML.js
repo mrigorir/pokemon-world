@@ -1,5 +1,4 @@
-const template = 
-`<div id="pokeList">
+const template = `<div id="pokeList">
 <div class="card"></div>
 <div class="card"></div>
 <div class="card"></div>
