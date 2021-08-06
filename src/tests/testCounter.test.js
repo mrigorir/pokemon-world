@@ -4,8 +4,8 @@
 
 import { expect } from '@jest/globals';
 import template from './templateHTML.js';
-import numberItems from '../src/modules/numberItems.js';
-import commentItems from '../src/modules/commentCounter.js';
+import numberItems from '../modules/numberItems.js';
+import commentItems from '../modules/commentCounter.js';
 import commentsTemplate from './commentsTemplate.js';
 describe('Test amount of items (cards) inside the main container', () => {
   document.body.innerHTML = template;
