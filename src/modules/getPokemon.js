@@ -15,6 +15,7 @@ const getPokemon = async (url) => {
 
 const numberOfPokemons = () => {
   const pokeCount = pokeList.children.length;
+
   pokeTitle.innerHTML = `
   <h1 class="text-center main-title">Pokemons (${pokeCount})</h1>`;
   return pokeCount;
@@ -63,4 +64,4 @@ const displayPokemon = pokemon => {
 
 }
 
-export {getPokemon, pokeList, counter};
+export {getPokemon, pokeList, counter, numberOfPokemons};
