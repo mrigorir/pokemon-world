@@ -1,6 +1,6 @@
 # Pokemon World
 
-> This project is a web application based on an external API witch allows to get basic information and pictures about any kind of pokemons. You can post your comments on the pokemon profile and give it likes. The comments and the likes features are stored into another API. 
+> This project is a web application based on an external API that allows getting basic information and pictures about any kind of pokemon. You can post your comments on the pokemon profile and give it likes. The comments and the likes features are stored in another API. 
 ## What was build in this part of the project:
 
  - Use Webpack dependencies for better JS and CSS file performance.
