@@ -4,8 +4,8 @@ const commentItems = () => {
   return items.length;
 };
 
-const addCounterCommmentDOM = () => {
+export const addCounterCommmentDOM = () => {
   document.querySelector('.comment-counter').textContent = `(${commentItems()})`;
 };
 
-export default addCounterCommmentDOM;
+export default commentItems;

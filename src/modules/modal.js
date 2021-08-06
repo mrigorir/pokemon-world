@@ -1,6 +1,6 @@
 // imports
 import { getComments, displayComments } from './comments.js';
-import addCounterCommmentDOM from './commentCounter.js';
+import { addCounterCommmentDOM } from './commentCounter.js';
 
 // variables
 const modalProfileTitle = document.getElementById('modalProfileTitle');
