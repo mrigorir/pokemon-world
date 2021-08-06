@@ -1,44 +1,47 @@
 /* general */
 
 body {
-  background-color: #f0f1f1;
+  background: linear-gradient(to left, #f0f1f1 0%, rgb(236, 230, 193) 100%);
+}
+
+.margin-bottom {
+  margin-bottom: 150px;
+}
+
+.dimensions {
+  height: 100px;
 }
 
 /* fonts */
 
 html {
-  font-family: sans-serif; 
+  font-family: sans-serif;
 }
 
 /* nav */
+
+.navbar {
+  background-color: #ff6347;
+}
 
 .bordered {
   border-bottom: solid 5px #000;
 }
 
 .link,
-.main-title {
+.poke-info {
   color: #ffd900;
-  text-shadow: -2px -2px 1px #173fa5, 2px 2px 1px #173fa5, -2px 2px 1px #173fa5, 2px 2px 1px #173fa5;
+  text-shadow: 2px -2px 4px #173fa5, 2px -2px 4px #173fa5, 2px -2px 4px #173fa5, 2px -2px 4px #173fa5;
 }
 
-.main-title {
-  text-shadow: -2px -5px 1px #173fa5, 2px 2px 1px #173fa5, -2px 2px 1px #173fa5, 2px 2px 1px #173fa5;
-}
-
-a.link:hover,
-.button:hover {
-  color: #ffd900;
-}
-
-.link:after {
-  display:block;
+.link::after {
+  display: block;
   content: '';
-  transform: scaleX(0);  
-  transform-origin:  0% 50%;
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
 }
 
-.link:hover:after {
+.link:hover::after {
   border-bottom: solid 5px #173fa5;
   transform: scaleX(1);
   transition: transform 300ms ease-in-out;
@@ -48,10 +51,7 @@ a.link:hover,
 
 .main-title {
   font-size: 80px;
-}
-
-.main-title,
-.pokemon-title {
+  text-shadow: -2px -5px 1px #173fa5, 2px 2px 1px #173fa5, -2px 2px 1px #173fa5, 2px 2px 1px #173fa5;
   text-transform: uppercase;
   font-weight: bolder;
 }
@@ -62,13 +62,13 @@ a.link:hover,
 
 .button,
 footer {
-  color: #ffff00;
+  color: #ff0;
 }
 
 /* pokemon section */
 
 .pokemon-title {
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .comment-board {
@@ -112,23 +112,22 @@ footer {
   border: solid 2px #000;
 }
 
-.button,
-.form-button:hover {
-  text-transform: capitalize;
-  border-radius: 0;
-  color: #ffff00;
-  background-color: tomato;
-  text-align: center;
-  padding: 2px 8px;
+.pokemon-board {
   box-shadow: 5px 5px #173fa5;
-  font-weight: 500;
-  font-size: 20px;
 }
 
-.pokemon-board {
-  border: dotted 2px;
+.pokemon-board,
+.card-border {
+  border: solid 3px;
   border-image: linear-gradient(to bottom, tomato 0%, gold 100%) 1;
-  box-shadow: 5px 5px #173fa5;
+}
+
+.card-border {
+  box-shadow: 5px 5px 5px 2px gray;
+}
+
+.bg-card-footer {
+  background-color: #f0f1f1;
 }
 
 .bg-pokemon {
@@ -139,4 +138,26 @@ footer {
 
 .bg-footer {
   background-color: #ff6347;
+}
+
+/* hovers */
+
+.button,
+.form-button:hover {
+  text-transform: capitalize;
+  border-radius: 0;
+  color: #ff0;
+  background-color: tomato;
+  text-align: center;
+  padding: 2px 8px;
+  box-shadow: 5px 5px #173fa5;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.main-title,
+.poke-info,
+a.link:hover,
+.button:hover {
+  color: #ffd900;
 }
