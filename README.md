@@ -15,8 +15,9 @@
 ## Image Preview
 ![Screenshot Main Page](./src/img/capture.jpg)
 
-## Video Presentation
-[here](https://drive.google.com/file/d/1Zm0H_LHywVQoUkvnVKnGRgIJZeoCcHHD/view?usp=sharing)
+## :movie_camera: [Video Presentation](https://drive.google.com/file/d/1Zm0H_LHywVQoUkvnVKnGRgIJZeoCcHHD/view?usp=sharing)
+
+## :star: Live Demo :star:
 
 ## Getting Started
 
