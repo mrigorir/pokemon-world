@@ -17,7 +17,7 @@
 
 ## :movie_camera: [Video Presentation](https://drive.google.com/file/d/1Zm0H_LHywVQoUkvnVKnGRgIJZeoCcHHD/view?usp=sharing)
 
-## :star: Live Demo :star:
+## :star: [Live Demo](https://mrigorir.github.io/pokemon-world/) :star:
 
 ## Getting Started
 
