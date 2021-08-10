@@ -23,7 +23,7 @@
 
 To get a local copy up and running follow these simple example steps:
 
-- On the project, GitHub page, navigate to the [main page of the repository](https://github.com/mrigorir/Pokemon-world)
+- On the project, GitHub page, navigate to the [main page of the repository](https://github.com/mrigorir/pokemon-world)
 
 - Click on a button named `Code`
 
@@ -89,7 +89,7 @@ To make sure the linters' checks using Github Actions work properly, you should 
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/mrigorir/Pokemon-world/issues).
+Feel free to check the [issues page](https://github.com/mrigorir/pokemon-world/issues).
 
 
 ## Show your support
